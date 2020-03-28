@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    color: #000000;
+    background-color: #d6fff7;
+    padding: 2em 2em;
+}
+header {
+    color: #000000;
+    text-align: center;
+}
+nav {
+    float: right;
+    margin: auto 1em;
+    padding-right: 100px;
+}
+input[type="email"], input[type="text"], input[type="password"] , input[type="tel"]{
+    padding: 0.5em;
+    margin: 0.5em 0;
+    width: 30%;
+    background-color: #ffffff;
+    border: #56707f solid 1px;
+    border-radius: 5px;
+    color: #000000
+}
+select {
+    background-color: #ffffff;
+    border: #56707f solid 1px;
+    color: #000000
+}
+input[type="checkbox"]{
+    padding: 0.5em;
+}
+input[type="button"]{
+    cursor: pointer;
+}
+textarea{
+    height: 20em;
+    width: 30em;
+    text-align: left;
+}
+a:hover{
+    color: blue;
+}
