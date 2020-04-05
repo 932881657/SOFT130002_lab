@@ -15,3 +15,7 @@ footer{
 footer a{
     color: white;
 }
+.item img, .item active img{
+    margin: 0 auto;
+    width: 80%;
+}
