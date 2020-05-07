@@ -11,9 +11,32 @@
 */
 
 function testTime(){
-
+    var time = new Date();
+    var second = time.getSeconds();
+    function count() {
+        var i = 0;
+        var number = 0.5;
+        function add() {
+            number *= 2;
+            return [(++i) , number];
+        }
+        return add;
+    }
+    var a = count();
+    setTimeout(function () {
+        clearInterval(Interval);
+        console.log("已到达整分钟")
+    },(60-second)*1000);
+    var Interval = setInterval(function () {
+        var s = a();
+        console.log(s[0] , s[1]);
+        if(s[0] === 10){
+            clearInterval(Interval);
+            console.log("已到达十次");
+        }
+    },5000);
 }
-// testTime();
+//testTime();
 
 /*
 2.
@@ -24,8 +47,27 @@ function testTime(){
     ④telephone与mail均是字符串。
 */
 function testMail(telephone,mail) {
-
+    var a = true ,b = true;
+    if(!(/^1[3|4|5|7|8]\d{9}$/.test(telephone))){
+        a = false;
+    }
+    if(!(/^([a-zA-Z]|[0-9])(\w|\-)+@[a-zA-Z0-9]+\.([a-zA-Z]{2,4})$/.test(mail))){
+        b = false;
+    }
+    if(a && b){
+        console.log("Both the telephone and the mail are right");
+    }
+    else if(!a && b){
+        console.log("The telephone is wrong and the mail is right");
+    }
+    else if(a && !b){
+        console.log("The telephone is right and the mail is wrong");
+    }
+    else {
+        console.log("Both the telephone and the mail are wrong");
+    }
 }
+//testMail("18017529810" ,"932881657@qq.com" )
 
 /*
 3.
@@ -37,8 +79,23 @@ function testMail(telephone,mail) {
     ⑤str为字符串。
 */
 function testRedundancy(str) {
-
+    var n = str.match(/(\b\w+\b)(?:\s\1){1}/gi);
+    var a;
+    if(n.length > 10){
+        a = n.sort();
+        a.length = 10;
+    }
+    else {
+        a = n;
+    }
+    var str = "Set {";
+    for(i = 0; i < a.length - 1; i++){
+        str += " '"+a[i]+"' ,";
+    }
+    str += " '"+a[i]+"' }";
+    console.log(str);
 }
+//testRedundancy("is Is is the iS is cost of of gasoline going up up aa aa");
 
 
 /*
@@ -56,8 +113,17 @@ function testRedundancy(str) {
     ①注意联系生活，并注意观察我给的上述例子。
 */
 function testKeyBoard(wantInput, actualInput) {
-
+    wantInput.replace("_" , "");
+    var badkey = new Set();
+    for(i = 0; i < wantInput.length ; i++){
+        var a = actualInput.search(wantInput[i]);
+        if(a === -1){
+            badkey.add(wantInput[i].toUpperCase());
+        }
+    }
+    console.log(badkey);
 }
+//testKeyBoard("7_This_is_a_test", "_hs_s_a_es")
 
 /*
 5.
@@ -72,7 +138,15 @@ function testKeyBoard(wantInput, actualInput) {
     ⑤str为字符串。
 */
 function testSpecialReverse(str) {
+    var a = str.trim().replace(/\s+/g , " ");
+    var array = a.split(" ");
+    var string = "";
+    for(i = 0 ; i < array.length ; i++){
+        string += array[array.length - i - 1] + " ";
+    }
+    console.log(string);
 }
+//testSpecialReverse("the sky is blue");
 
 /*
 6.
@@ -90,7 +164,15 @@ function testSpecialReverse(str) {
 */
 
 function twoSum(nums, target) {
+   var map = new Map();
+   for(i = 0 ; i < nums.length ; i++){
+       map.set(nums[i] , i);
+       if(map.has(target - nums[i])){
+           console.log("[" + map.get(target - nums[i]) + " , " + i + "]");
+       }
+   }
 }
+//twoSum([1,2,3,4] , 5);
 
 
 /*
@@ -105,7 +187,25 @@ function twoSum(nums, target) {
     ⑤str为字符串。
 */
 function lengthOfLongestSubstring(str) {
+    var maxlength  = 0, left = 0 , right = 0;
+    var map = new Map();
+    while(left < str.length && right < str.length){
+        if(map.has(str[right])){
+            map.delete(str[left]);
+            map.set(str[right] , right);
+            left++;
+            right++;
+        }
+        else{
+            map.set(str[right] , right);
+            right++;
+            maxlength = right - left;
+
+        }
+    }
+    console.log(maxlength);
 }
+//lengthOfLongestSubstring("babcbbb");
 
 /*
 8.
@@ -119,3 +219,31 @@ function lengthOfLongestSubstring(str) {
 function Country() {
     this.name = "国家";
 }
+function DevelopingCountry() {
+    Country.call(this, "DevelopingCountry");
+    DevelopingCountry.prototype.sayHi = function () {
+        console.log("Hi,i am a developing country.");
+    }
+}
+var Developing = new DevelopingCountry();
+Developing.sayHi();
+
+function PoorCountry() {
+    PoorCountry.prototype.saySad = function () {
+        console.log("I am a sad poor country.");
+    }
+}
+PoorCountry.prototype = new Country();
+var Poor = new PoorCountry();
+Poor.saySad();
+
+function DevelopedCountry() {
+    DevelopedCountry.prototype.sayHappy = function () {
+        console.log("I am a Happy developed country");
+    }
+
+}
+DevelopedCountry.prototype = Object.create(Country.prototype);
+var Developed = new DevelopedCountry;
+Developed.sayHappy();
+
