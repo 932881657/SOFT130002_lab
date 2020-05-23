@@ -68,3 +68,10 @@ a{
 .container .arrow:hover {
     background-color: rgba(0,0,0,0.2);
 }
+h3{
+    text-align: center;
+    margin: 2em auto;
+}
+table{
+   margin: 2em auto;
+}

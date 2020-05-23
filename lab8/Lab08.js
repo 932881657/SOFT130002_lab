@@ -2,7 +2,17 @@
 /*请在该区域内声明或者获取所要使用的全局变量*/
 /********************************************begin************************************/
 
-/*Global Variable Area */
+var num = 1;
+var leftarr = document.getElementsByClassName("arrow arrow_left")[0];
+var rightarr = document.getElementsByClassName("arrow arrow_right")[0];
+var pic = document.getElementsByClassName("wrap")[0];
+var buttons = document.getElementsByClassName("buttons")[0].childNodes;
+var nodes = new Array();
+var container = document.getElementsByClassName("container")[0];
+var Interval;
+
+
+
 
 /*********************************************end*************************************/
 
@@ -21,8 +31,35 @@
  * ⑤本部分只能使用原生JS。
  */
 /********************************************begin************************************/
-
-/*Code Here*/
+for(var i = 0;i<buttons.length;i++) {
+    if (buttons[i].nodeName != '#text') {
+        nodes.push(buttons[i]);
+    }
+}
+leftarr.onclick = function () {
+    nodes[num-1].classList.remove("on");
+    num--;
+    switch (num) {
+        case 0 : pic.style.marginLeft = "-2400px";num = 5;break;
+        case 1 : pic.style.marginLeft = "0px";break;
+        case 2 : pic.style.marginLeft = "-600px";break;
+        case 3 : pic.style.marginLeft = "-1200px";break;
+        case 4 : pic.style.marginLeft = "-1800px";break;
+    }
+    nodes[num-1].classList.add("on");
+}
+rightarr.onclick = function () {
+    nodes[num-1].classList.remove("on");
+    num++;
+    switch (num) {
+        case 2 : pic.style.marginLeft = "-600px";break;
+        case 3 : pic.style.marginLeft = "-1200px";break;
+        case 4 : pic.style.marginLeft = "-1800px";break;
+        case 5 : pic.style.marginLeft = "-2400px";break;
+        case 6 : pic.style.marginLeft = "0px";num = 1;break;
+    }
+    nodes[num-1].classList.add("on");
+}
 
 /*********************************************end*************************************/
 
@@ -38,8 +75,35 @@
  * ⑤本部分只能使用原生JS。
  */
 /********************************************begin************************************/
-
-/*Code Here*/
+Interval = setInterval(function () {
+    nodes[num-1].classList.remove("on");
+    num++;
+    switch (num) {
+        case 2 : pic.style.marginLeft = "-600px";break;
+        case 3 : pic.style.marginLeft = "-1200px";break;
+        case 4 : pic.style.marginLeft = "-1800px";break;
+        case 5 : pic.style.marginLeft = "-2400px";break;
+        case 6 : pic.style.marginLeft = "0px";num = 1;break;
+    }
+    nodes[num-1].classList.add("on");
+} , 2000);
+container.onmouseover = function () {
+    clearInterval(Interval);
+}
+container.onmouseout = function () {
+    Interval = setInterval(function () {
+        nodes[num-1].classList.remove("on");
+        num++;
+        switch (num) {
+            case 2 : pic.style.marginLeft = "-600px";break;
+            case 3 : pic.style.marginLeft = "-1200px";break;
+            case 4 : pic.style.marginLeft = "-1800px";break;
+            case 5 : pic.style.marginLeft = "-2400px";break;
+            case 6 : pic.style.marginLeft = "0px";num = 1;break;
+        }
+        nodes[num-1].classList.add("on");
+    } , 2000);
+}
 
 /*********************************************end*************************************/
 
@@ -53,9 +117,46 @@
  * ③本部分只能使用原生JS。
  */
 /********************************************begin************************************/
-
-/*Code Here*/
-
+document.getElementById("1").onclick = function () {
+    num = 1;
+    pic.style.marginLeft = "0px";
+    for(var k = 0 ; k < 5 ; k++){
+        nodes[k].classList.remove("on");
+    }
+    nodes[0].classList.add("on");
+}
+document.getElementById("2").onclick = function () {
+    num = 2;
+    pic.style.marginLeft = "-600px";
+    for(var k = 0 ; k < 5 ; k++){
+        nodes[k].classList.remove("on");
+    }
+    nodes[1].classList.add("on");
+}
+document.getElementById("3").onclick = function () {
+    num = 3;
+    pic.style.marginLeft = "-1200px";
+    for(var k = 0 ; k < 5 ; k++){
+        nodes[k].classList.remove("on");
+    }
+    nodes[2].classList.add("on");
+}
+document.getElementById("4").onclick = function () {
+    num = 4;
+    pic.style.marginLeft = "-1800px";
+    for(var k = 0 ; k < 5 ; k++){
+        nodes[k].classList.remove("on");
+    }
+    nodes[3].classList.add("on");
+}
+document.getElementById("5").onclick = function () {
+    num = 5;
+    pic.style.marginLeft = "-2400px";
+    for(var k = 0 ; k < 5 ; k++){
+        nodes[k].classList.remove("on");
+    }
+    nodes[4].classList.add("on");
+}
 /*********************************************end*************************************/
 
 
@@ -67,7 +168,11 @@
  * ③本部分可以使用jQuery，也可以使用原生JS。
  */
 /********************************************begin************************************/
+$(".edit").on("click",function(){
+    this.selectionStart = 0;
+    this.selectionEnd = 0;
+})
 
-/*Code Here*/
+
 
 /*********************************************end*************************************/
