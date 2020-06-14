@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d5d63b14-d10f-495d-8f20-fccbd806a526" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../lab10/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/lab11.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/webServers.xml" beforeDir="false" />
-    </list>
+    <list default="true" id="d5d63b14-d10f-495d-8f20-fccbd806a526" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,7 +27,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="web.server" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RunManager">
     <configuration name="lab11" type="PhpBuiltInWebServerConfigurationType" factoryName="PHP Built-in Web Server" document_root="$PROJECT_DIR$" port="63342">
@@ -56,6 +45,11 @@
       <option name="presentableId" value="Default" />
       <updated>1591520447908</updated>
       <workItem from="1591520449101" duration="582000" />
+      <workItem from="1592131979350" duration="1895000" />
+      <workItem from="1592134398227" duration="2168000" />
+      <workItem from="1592136610037" duration="424000" />
+      <workItem from="1592137081821" duration="474000" />
+      <workItem from="1592137572566" duration="3029000" />
     </task>
     <servers />
   </component>
@@ -71,29 +65,38 @@
       <screen x="0" y="23" width="1440" height="825" />
     </state>
     <state x="183" y="100" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.825@0.23.1440.825" timestamp="1591520820781" />
-    <state width="930" height="202" key="GridCell.Tab.0.bottom" timestamp="1591520879508">
-      <screen x="0" y="23" width="1440" height="825" />
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1592137555787">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1592137555787" />
     <state width="930" height="202" key="GridCell.Tab.0.bottom/0.23.1440.825@0.23.1440.825" timestamp="1591520879508" />
-    <state width="930" height="202" key="GridCell.Tab.0.center" timestamp="1591520879508">
-      <screen x="0" y="23" width="1440" height="825" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1592137555787">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1592137555787" />
     <state width="930" height="202" key="GridCell.Tab.0.center/0.23.1440.825@0.23.1440.825" timestamp="1591520879508" />
-    <state width="930" height="202" key="GridCell.Tab.0.left" timestamp="1591520879508">
-      <screen x="0" y="23" width="1440" height="825" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1592137555787">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1592137555787" />
     <state width="930" height="202" key="GridCell.Tab.0.left/0.23.1440.825@0.23.1440.825" timestamp="1591520879508" />
-    <state width="930" height="202" key="GridCell.Tab.0.right" timestamp="1591520879508">
-      <screen x="0" y="23" width="1440" height="825" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1592137555787">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1592137555787" />
     <state width="930" height="202" key="GridCell.Tab.0.right/0.23.1440.825@0.23.1440.825" timestamp="1591520879508" />
     <state width="243" height="457" key="HiddenNamespacesPopup" timestamp="1591520711348">
       <screen x="0" y="23" width="1440" height="825" />
     </state>
     <state width="243" height="457" key="HiddenNamespacesPopup/0.23.1440.825@0.23.1440.825" timestamp="1591520711348" />
-    <state x="220" y="77" key="SettingsEditor" timestamp="1591520534235">
-      <screen x="0" y="23" width="1440" height="825" />
+    <state x="599" y="335" key="NewPhpFileDialog" timestamp="1592139373884">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="599" y="335" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1592139373884" />
+    <state x="235" y="54" key="SettingsEditor" timestamp="1592136940554">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="235" y="54" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1592136940554" />
     <state x="220" y="77" key="SettingsEditor/0.23.1440.825@0.23.1440.825" timestamp="1591520534235" />
   </component>
 </project>
